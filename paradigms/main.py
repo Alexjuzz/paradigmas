@@ -13,8 +13,12 @@ def sort_list_deklarative(num):
 
 def sort_list_imper(num):
     return sorted(num)
-    # Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-   print(sort_list_deklarative([3,1,2,5]))
-   print(sort_list_imper([3,1,2,5]))
+def multiply(nubmer):
+    step = 1
+    while step <= nubmer:
+        print("{} * {} = ".format(step,nubmer) + str(  step*nubmer))
+        step+=1
 
+if __name__ == '__main__':
+
+   multiply(5)
