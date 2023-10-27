@@ -6,13 +6,15 @@ def correlation(first, second):
     mean_second = sum(second) / len(second)
 
     # Вычисляем числитель формулы корреляции
-    numerator = sum((x - mean_first) * (y - mean_second) for x, y in zip(first, second))
+    def numerator():
+        return sum((x - mean_first) * (y - mean_second) for x, y in zip(first, second))
 
     # Вычисляем знаменатель формулы корреляции
-    denominator = sqrt(sum((x - mean_first)**2 for x in first) * sum((y - mean_second)**2 for y in second))
+    def denomin():
+        return  sqrt(sum((x - mean_first)**2 for x in first) * sum((y - mean_second)**2 for y in second))
 
     # Вычисляем корреляцию
-    correlation = numerator / denominator if denominator != 0 else 0
+    correlation = numerator() / denomin() if denomin != 0 else 0
 
     return correlation
 
