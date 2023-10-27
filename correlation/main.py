@@ -14,9 +14,8 @@ def correlation(first, second):
         return  sqrt(sum((x - mean_first)**2 for x in first) * sum((y - mean_second)**2 for y in second))
 
     # Вычисляем корреляцию
-    correlation = numerator() / denomin() if denomin != 0 else 0
+    return  numerator() / denomin() if denomin != 0 else 0
 
-    return correlation
 
 if __name__ == '__main__':
     first = [1, 2, 3, 5]
